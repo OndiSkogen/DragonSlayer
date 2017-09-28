@@ -19,8 +19,10 @@ namespace DragonSlayer
     /// </summary>
     public partial class CreateCharacter : Window
     {
-        public CreateCharacter()
+        MainWindow mainTemp;
+        public CreateCharacter(MainWindow main)
         {
+            mainTemp = main;
             InitializeComponent();
         }
 
@@ -37,7 +39,7 @@ namespace DragonSlayer
                 string slayerName = characterName.Text;
                 string slayerClass = temp.Content.ToString();
                 Player player1 = new Player(slayerName, slayerClass);
-                Game game = new Game(player1);
+                Game game = new Game(player1, mainTemp);
                 game.Show();
                 this.Close();
             }            

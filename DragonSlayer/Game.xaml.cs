@@ -22,14 +22,16 @@ namespace DragonSlayer
         Player player;
         private int level;
         Dragon dragon;
+        MainWindow main;
 
-        public Game(Player p1)
+        public Game(Player p1, MainWindow newMain)
         {
             player = p1;
             level = 1;
             dragon = new Dragon(level);
             InitializeComponent();
             UpdateStats();
+            main = newMain;
         }
 
         private void Quit_Click(object sender, RoutedEventArgs e)
@@ -45,8 +47,7 @@ namespace DragonSlayer
             {
                 this.Close();
                 MessageBox.Show("You died!");
-                MainWindow mainWindow = new MainWindow();
-                mainWindow.Show();
+                main.Show();
             }
             else if (dragon.HitPoints <= 0)
             {
@@ -59,14 +60,18 @@ namespace DragonSlayer
 
         private void Magic_Click(object sender, RoutedEventArgs e)
         {
-            dragon.TakeDmg(player.MagicAttack());
+            if (player.Mana > 0)
+            {
+                dragon.TakeDmg(player.MagicAttack());
+            }
+
             player.TakeDmg(dragon.Attack());
+
             if (player.HitPoints <= 0)
             {
                 this.Close();
                 MessageBox.Show("You died!");
-                MainWindow mainWindow = new MainWindow();
-                mainWindow.Show();
+                main.Show();
             }
             else if (dragon.HitPoints <= 0)
             {
@@ -85,8 +90,7 @@ namespace DragonSlayer
             {
                 this.Close();
                 MessageBox.Show("You died!");
-                MainWindow mainWindow = new MainWindow();
-                mainWindow.Show();
+                main.Show();
             }
             UpdateStats();
         }

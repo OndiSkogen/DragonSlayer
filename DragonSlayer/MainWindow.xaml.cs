@@ -27,7 +27,8 @@ namespace DragonSlayer
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            CreateCharacter createCharacter = new CreateCharacter();
+            MainWindow main = new MainWindow();
+            CreateCharacter createCharacter = new CreateCharacter(main);
             createCharacter.Show();
             this.Close();
         }
