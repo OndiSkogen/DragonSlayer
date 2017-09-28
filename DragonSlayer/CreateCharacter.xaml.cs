@@ -37,7 +37,7 @@ namespace DragonSlayer
                 string slayerName = characterName.Text;
                 string slayerClass = temp.Content.ToString();
                 Player player1 = new Player(slayerName, slayerClass);
-                Game game = new Game();
+                Game game = new Game(player1);
                 game.Show();
                 this.Close();
             }            

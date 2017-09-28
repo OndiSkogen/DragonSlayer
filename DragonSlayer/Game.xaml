@@ -17,11 +17,19 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Button Width="50" Grid.Column="0" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10,20,0,0" Name="Attack">Attack</Button>
-        <Button Width="50" Grid.Column="0" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10,20,0,0" Name="Magic">Magic</Button>
-        <Button Width="50" Grid.Column="0" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10,20,0,0" Name="Heal">Heal</Button>
-        <Button Width="50" Grid.Column="0" Grid.Row="3" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="10,0,0,10" Name="Quit">Quit</Button>
-        <Image Source="Images/Slayer.png" Grid.Column="1" HorizontalAlignment="Left" Margin="0,0,0,24" Grid.RowSpan="3" Width="142"/>
-        <Image Source="Images/Dragon.png" HorizontalAlignment="Right" Grid.Column="2" Width="142"/>
+        <Button Width="50" Grid.Column="0" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10,20,0,0" Name="Attack" Click="Attack_Click">Attack</Button>
+        <Button Width="50" Grid.Column="0" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10,20,0,0" Name="Magic" Click="Magic_Click">Magic</Button>
+        <Button Width="50" Grid.Column="0" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10,20,0,0" Name="Heal" Click="Heal_Click">Heal</Button>
+        <Button Width="50" Grid.Column="0" Grid.Row="3" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="10,0,0,10" Name="Quit" Click="Quit_Click">Quit</Button>
+        <Image Source="Images/Slayer.png" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.RowSpan="3" Width="130"/>
+        <Image Source="Images/Dragon.png" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Column="2" Width="142" Grid.RowSpan="3"/>
+        <TextBlock Text="HP: " Grid.Column="1" Grid.Row="3" />
+        <TextBlock Text="Mana: " Grid.Column="1" Grid.Row="3" Margin="0,20,0,0"/>
+        <TextBlock Text="HP: " Grid.Column="1" Grid.Row="3" HorizontalAlignment="Right" Margin="0,0,57,0"/>
+        <TextBlock Text="Level:" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Right" Margin="0,20,50,0"/>
+        <TextBlock Name="PlayerHP" Text="0" Grid.Column="1" Grid.Row="3" Margin="20,0,0,0"/>
+        <TextBlock Name="PlayerMana" Grid.Column="1" Grid.Row="3" Margin="35,20,0,0"/>
+        <TextBlock Name="DragonHP" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Right" Margin="0,0,40,0"/>
+        <TextBlock Name="DragonLevel" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Right" Margin="0,20,28,0"/>
     </Grid>
 </Window>
