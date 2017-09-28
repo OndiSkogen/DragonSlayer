@@ -5,11 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DragonSlayer"
         mc:Ignorable="d"
-        Title="DragonSlayer" Height="350" Width="525">
+        Title="DragonSlayer" Height="350" Width="200">
     <Grid>
-        <Button Grid.Column="0" Content="Start Game" HorizontalAlignment="Left" Margin="220,50,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-        <Button Grid.Column="0" Content="Leaderboard" HorizontalAlignment="Left" Margin="220,90,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
-        <Button Grid.Column="0" Content="Exit" HorizontalAlignment="Left" Margin="220,130,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
+        <Button Content="Start Game" HorizontalAlignment="Center" Margin="0,50,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Content="Exit" HorizontalAlignment="Center" Margin="0,90,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
 
     </Grid>
 </Window>
