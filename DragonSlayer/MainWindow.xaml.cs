@@ -24,5 +24,24 @@ namespace DragonSlayer
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            CreateCharacter createCharacter = new CreateCharacter();
+            createCharacter.Show();
+            this.Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Leaderboard leaderboard = new Leaderboard();
+            leaderboard.Show();
+            this.Close();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
